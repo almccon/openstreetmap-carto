@@ -2046,7 +2046,8 @@ Layer:
               'natural_' || CASE WHEN "natural" IN ('wood', 'glacier', 'sand', 'scree', 'shingle', 'bare_rock',
                                                     'water', 'bay', 'strait') THEN "natural" ELSE NULL END,
               'place_' || CASE WHEN place IN ('island') THEN place ELSE NULL END,
-              'boundary_' || CASE WHEN boundary IN ('protected_area', 'aboriginal_lands', 'national_park') THEN boundary ELSE NULL END,
+              'boundary_' || CASE WHEN boundary IN ('aboriginal_lands', 'national_park') THEN boundary ELSE NULL END,
+              'boundary_' || CASE WHEN boundary IN ('protected_area') AND tags->'protect_class' = '24' THEN boundary ELSE NULL END,
               'leisure_' || CASE WHEN leisure IN ('nature_reserve') THEN leisure ELSE NULL END
             ) AS feature,
             name,
@@ -2124,7 +2125,8 @@ Layer:
                              THEN concat_ws('_', historic, CASE WHEN tags->'memorial' IN ('plaque') THEN tags->'memorial' ELSE NULL END)
                              ELSE NULL END,
               'highway_' || CASE WHEN highway IN ('services', 'rest_area', 'bus_stop', 'elevator') THEN highway ELSE NULL END,
-              'boundary_' || CASE WHEN boundary IN ('protected_area', 'aboriginal_lands', 'national_park') THEN boundary ELSE NULL END,
+              'boundary_' || CASE WHEN boundary IN ('aboriginal_lands', 'national_park') THEN boundary ELSE NULL END,
+              'boundary_' || CASE WHEN boundary IN ('protected_area') AND tags->'protect_class' = '24' THEN boundary ELSE NULL END,
               'waterway_' || CASE WHEN waterway IN ('dam', 'dock') THEN waterway ELSE NULL END,
               'tourism_' || CASE WHEN tourism IN ('viewpoint', 'attraction') THEN tourism ELSE NULL END
             ) AS feature,

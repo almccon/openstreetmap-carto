@@ -1998,6 +1998,7 @@
   [feature = 'landuse_forest'],
   [feature = 'boundary_national_park'],
   [feature = 'boundary_aboriginal_lands'],
+  [feature = 'boundary_protected_area'],
   [feature = 'leisure_nature_reserve'] {
     [zoom >= 8][way_pixels > 3000][is_building = 'no'],
     [zoom >= 17] {
@@ -2030,7 +2031,8 @@
       [feature = 'leisure_nature_reserve'] {
         text-fill: darken(@park, 70%);
       }
-      [feature = 'boundary_aboriginal_lands'] {
+      [feature = 'boundary_aboriginal_lands'],
+      [feature = 'boundary_protected_area'] {
         text-fill: brown;
       }
     }

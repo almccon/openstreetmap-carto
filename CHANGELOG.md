@@ -1,4 +1,39 @@
-## [Unreleased](https://github.com/gravitystorm/openstreetmap-carto/compare/v4.15.0...master)
+## [Unreleased](https://github.com/gravitystorm/openstreetmap-carto/compare/v4.16.0...master)
+## Changes
+- Buildings code rewrite
+- Add icons for barrier=cattle_grid, barrier=stile 
+- Render amenity=internet_cafe
+- Making societal amenities look like residential on medium zoom
+- Render man_made=telescope telescope:type=radio 
+- tweak outline of swimming pools and render it from z17
+- Rendering dots for gastronomy on z17
+- Render motorway junction names later
+- Move danger_area into landuse-overlay
+- Clean up z13 and z14
+- Drop buildings up to z13 instead of z13
+- Correctly drop minor waterways from z13
+- Render intermittent streams/ditches/drains from z15
+- Reduce lightening of tramways
+- Added text-repeat-distance for highway names
+- Add icons for memorial subtags
+- Render optical telescopes
+- Render religious landuse and place of worship lighter
+- add basin=detention/infiltration to int_intermittent variable
+
+## [v4.16.0](https://github.com/gravitystorm/openstreetmap-carto/compare/v4.15.0...v4.16.0) - 2018-10-19
+## Changes
+- Changing societal amenities color to less intensive
+- Adding rendering for natural=strait
+- Adding rendering for leisure=track on lines
+- Adding icon for amenity=vehicle_inspection
+- Adding icon for leisure=sports_centre + sport=swimming and leisure=swimming_area
+- Adding icon for tourism=gallery
+- Changing color for aeroway=apron in aerodromes
+- Moving amenity=post_box to z19+
+- Moving amenity=atm to z19+
+- Replacing icon for information=tactile_model
+- Ordering amenity_lines by layer
+- Small documentation and code fixes
 
 ## [v4.15.0](https://github.com/gravitystorm/openstreetmap-carto/compare/v4.14.0...v4.15.0) - 2018-09-21
 ## Changes
